@@ -1,0 +1,232 @@
+:root {
+  --primary-color: #1b3c53;
+  --secondary-color: #456882;
+  --accent-color: #d2c1b6;
+  --bg-color: #f9f3ef;
+  --text-color: #1b3c53;
+  --light-text: #f9f3ef;
+}
+
+/* General Body & Typography */
+body {
+  background-color: var(--bg-color);
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.main-content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand,
+.section-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.section-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+
+/* Navbar */
+.navbar-custom {
+  background-color: var(--primary-color) !important;
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: var(--light-text) !important;
+}
+
+.nav-link {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+  color: rgba(249, 243, 239, 0.7) !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--light-text) !important;
+}
+
+/* Cart Notification Badge */
+.cart-badge {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  font-size: 0.7em;
+  padding: 0.3em 0.6em;
+  vertical-align: top;
+  margin-left: 2px;
+  font-weight: 700;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 8rem 0;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 2px;
+  padding: 12px 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-outline-light {
+  border-color: var(--light-text);
+  color: var(--light-text);
+}
+
+.btn-outline-light:hover {
+  background-color: var(--light-text);
+  color: var(--primary-color);
+}
+
+.btn-outline-primary {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Cards */
+.card-modern {
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  box-shadow: none;
+  transition: box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.card-modern:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+.card-img-container {
+  overflow: hidden;
+}
+
+.card-img-top {
+  border-radius: 0;
+  transition: transform 0.4s ease;
+}
+
+.card-modern:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-footer {
+  background-color: #ffffff;
+  border-top: 1px solid #eee;
+}
+
+/* Forms */
+.form-control,
+.form-select {
+  border-radius: 2px;
+  border: 1px solid var(--accent-color);
+  padding: 12px;
+}
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.25rem rgba(69, 104, 130, 0.1);
+}
+
+.card-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+/* Footer */
+.footer-modern {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding-top: 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid #c1b0a5;
+}
+
+.footer-modern .text-uppercase {
+  color: var(--primary-color);
+  letter-spacing: 1px;
+}
+
+.footer-link {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: var(--primary-color);
+}
+
+.footer-bottom {
+  background-color: rgba(27, 60, 83, 0.1);
+}
+
+/* Animation */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Filter Bar */
+.filter-bar {
+  background-color: #fff;
+  border: 1px solid #eee;
+}
