@@ -135,7 +135,7 @@ Secara default, `db_fashion.sql` mungkin sudah memiliki akun admin. Namun, karen
 3.  Buka **phpMyAdmin**, masuk ke tabel `users`.
 4.  Cari user yang baru dibuat, lalu ubah kolom `role` dari `'user'` menjadi `'admin'`.
 5.  Login kembali dengan akun tersebut untuk mengakses folder `/admin`.
-
+```
 ## ⚠️ Catatan Penting
 
 - **Keamanan:** Aplikasi ini menggunakan PHP Session dan Prepared Statements (MySQLi) untuk mencegah SQL Injection dasar. Namun, untuk penggunaan produksi (live server), disarankan menambah validasi CSRF dan mengamankan folder upload.
