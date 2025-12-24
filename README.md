@@ -64,37 +64,65 @@ Pastikan folder berikut tersedia dan memiliki izin tulis (write permission) agar
 - `cmclots/uploads/products/`
 - `cmclots/uploads/proofs/`
 
-## 📂 Struktur Direktori Utama
+## 📂 Struktur Direktori
 
-1. Halaman Publik (Frontend)
-index.php (Beranda)
-produk.php (Katalog)
-about.php (Tentang Kami)
-contact.php (Kontak)
+Berikut adalah susunan folder dan file dalam proyek **CM Stocklots**.
 
-2. Manajemen Akun & Autentikasi
-login.php & logout.php
-register.php
-akun.php (Profil User)
-edit_profil.php & ganti_password.php
-
-3. Transaksi & Belanja
-keranjang.php & keranjang_action.php
-checkout.php & order_action.php
-payment.php & upload_payment_proof.php
-riwayat_pesanan.php
-invoice.php
-
-4. Panel Administrator (/admin)
-Manajemen Produk: index.php, tambah_produk.php, edit_produk.php, hapus_produk.php
-Manajemen Pesanan: pesanan.php, detail_pesanan.php, verifikasi_pembayaran.php, proses_verifikasi.php
-User: pengguna.php
-Layout: _header_admin.php, _footer_admin.php
-
-5. Sistem & Aset
-includes/db.php (Koneksi Database)
-assets/css/style.css & assets/js/main.js
-uploads/ (Folder penyimpanan gambar)
+```text
+cmclots/
+│
+├── admin/                        # Panel Kendali Administrator
+│   ├── _footer_admin.php         # Footer khusus admin
+│   ├── _header_admin.php         # Header & Navigasi admin
+│   ├── detail_pesanan.php        # Melihat detail order user
+│   ├── edit_produk.php           # Form edit data produk
+│   ├── hapus_produk.php          # Logika hapus/nonaktifkan produk
+│   ├── index.php                 # Dashboard (Daftar Produk)
+│   ├── pengguna.php              # Daftar user terdaftar
+│   ├── pesanan.php               # Daftar semua pesanan masuk
+│   ├── proses_verifikasi.php     # Logika backend verifikasi pembayaran
+│   ├── tambah_produk.php         # Form tambah produk baru
+│   └── verifikasi_pembayaran.php # Halaman cek bukti transfer
+│
+├── assets/                       # File Statis (Frontend Assets)
+│   ├── css/
+│   │   └── style.css             # Styling utama website
+│   └── js/
+│       └── main.js               # Script interaksi (animasi fade-in, dll)
+│
+├── includes/                     # Komponen Modular (Reused Code)
+│   ├── db.php                    # Konfigurasi koneksi database
+│   ├── footer.php                # Footer halaman utama
+│   └── header.php                # Navbar & Header halaman utama
+│
+├── uploads/                      # Penyimpanan File (User Generated Content)
+│   ├── products/                 # Gambar produk yang diupload admin
+│   └── proofs/                   # Bukti pembayaran yang diupload user
+│
+├── db_fashion.sql                # File Database Import (SQL Dump)
+│
+├── index.php                     # Halaman Utama (Landing Page)
+├── produk.php                    # Katalog Produk
+├── about.php                     # Halaman Tentang Kami
+├── contact.php                   # Halaman Kontak
+│
+├── login.php                     # Halaman Masuk
+├── register.php                  # Halaman Daftar
+├── logout.php                    # Script Keluar Sesi
+│
+├── akun.php                      # Dashboard User / Profil
+├── edit_profil.php               # Form ubah data diri
+├── ganti_password.php            # Form ubah password
+│
+├── keranjang.php                 # Halaman Cart
+├── keranjang_action.php          # Logika tambah/hapus item cart
+├── checkout.php                  # Form pengiriman & finalisasi order
+├── order_action.php              # Logika pemrosesan order ke database
+│
+├── payment.php                   # Halaman instruksi & upload bukti bayar
+├── upload_payment_proof.php      # Logika upload gambar bukti bayar
+├── riwayat_pesanan.php           # Daftar status pesanan user
+└── invoice.php                   # Tampilan faktur pembelian (Cetak)
 
 ## 🔐 Akun Administrator
 
