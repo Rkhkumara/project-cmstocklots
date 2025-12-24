@@ -66,59 +66,35 @@ Pastikan folder berikut tersedia dan memiliki izin tulis (write permission) agar
 
 ## 📂 Struktur Direktori Utama
 
-cmclots/
-│
-├── admin/ # Halaman & Logika Administrator
-│ ├── \_footer_admin.php
-│ ├── \_header_admin.php
-│ ├── detail_pesanan.php
-│ ├── edit_produk.php
-│ ├── hapus_produk.php
-│ ├── index.php # Dashboard Produk Admin
-│ ├── pengguna.php
-│ ├── pesanan.php
-│ ├── proses_verifikasi.php
-│ ├── tambah_produk.php
-│ └── verifikasi_pembayaran.php
-│
-├── assets/ # File Statis (CSS/JS)
-│ ├── css/
-│ │ └── style.css
-│ └── js/
-│ └── main.js
-│
-├── includes/ # Komponen Umum
-│ ├── db.php # Koneksi Database
-│ ├── footer.php
-│ └── header.php
-│
-├── uploads/ # Penyimpanan File
-│ ├── products/ # Gambar Produk
-│ │ ├── [file_gambar_produk.png/jpg]
-│ │ └── ...
-│ └── proofs/ # Bukti Pembayaran
-│ ├── [file_bukti_transfer.png/jpg]
-│ └── ...
-│
-├── about.php
-├── akun.php
-├── checkout.php
-├── contact.php
-├── db_fashion.sql # File Database SQL
-├── edit_profil.php
-├── ganti_password.php
-├── index.php # Halaman Utama (Homepage)
-├── invoice.php
-├── keranjang.php
-├── keranjang_action.php
-├── login.php
-├── logout.php
-├── order_action.php
-├── payment.php
-├── produk.php
-├── register.php
-├── riwayat_pesanan.php
-└── upload_payment_proof.php
+1. Halaman Publik (Frontend)
+index.php (Beranda)
+produk.php (Katalog)
+about.php (Tentang Kami)
+contact.php (Kontak)
+
+2. Manajemen Akun & Autentikasi
+login.php & logout.php
+register.php
+akun.php (Profil User)
+edit_profil.php & ganti_password.php
+
+3. Transaksi & Belanja
+keranjang.php & keranjang_action.php
+checkout.php & order_action.php
+payment.php & upload_payment_proof.php
+riwayat_pesanan.php
+invoice.php
+
+4. Panel Administrator (/admin)
+Manajemen Produk: index.php, tambah_produk.php, edit_produk.php, hapus_produk.php
+Manajemen Pesanan: pesanan.php, detail_pesanan.php, verifikasi_pembayaran.php, proses_verifikasi.php
+User: pengguna.php
+Layout: _header_admin.php, _footer_admin.php
+
+5. Sistem & Aset
+includes/db.php (Koneksi Database)
+assets/css/style.css & assets/js/main.js
+uploads/ (Folder penyimpanan gambar)
 
 ## 🔐 Akun Administrator
 
